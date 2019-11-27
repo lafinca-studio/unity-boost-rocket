@@ -156,7 +156,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6b311b7f9038e97499013a0f1b3baa8f, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 0.8
@@ -254,8 +254,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8445e047873cf804b8342e56c85f7bfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enginePower: 20
-  deltaWings: 100
+  enginePower: 27
+  deltaWings: 250
+  mainEngine: {fileID: 8300000, guid: b49e4e372824a084995093791240c2ae, type: 3}
+  deathAudio: {fileID: 8300000, guid: f05b33f682f940b43a8e89ee1542ad9b, type: 3}
+  levelCompleteAudio: {fileID: 8300000, guid: 15e697fe99197204b9dc1fb54b223956, type: 3}
 --- !u!1 &3556116265945935406
 GameObject:
   m_ObjectHideFlags: 0
