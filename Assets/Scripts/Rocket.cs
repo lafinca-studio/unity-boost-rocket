@@ -9,7 +9,7 @@ public class Rocket : MonoBehaviour
 
     public float enginePower = 5f;
     public float deltaWings = 100f;
-    [SerializeField] float levelLoadDelay = 2f;
+    [SerializeField] float levelLoadDelay = .7f;
 
     [SerializeField] AudioClip mainEngine;
     [SerializeField] AudioClip deathAudio;
@@ -21,6 +21,7 @@ public class Rocket : MonoBehaviour
 
     enum State { Alive, Dying, Transcending }
     State state = State.Alive;
+    bool collisionsEnabled = true;
 
     // Start is called before the first frame update
     void Start()
@@ -37,11 +38,27 @@ public class Rocket : MonoBehaviour
             RespondRotateInput();
             RespondThrustInput();
         }
+        if (Debug.isDebugBuild)
+        {
+            RespondToDebutKeys();
+        }
+    }
+
+    private void RespondToDebutKeys()
+    {
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            LoadNextLevel();
+        }
+        else if (Input.GetKeyDown(KeyCode.C)) {
+            collisionsEnabled = !collisionsEnabled;
+            Debug.Log(collisionsEnabled);
+        }
     }
 
     void OnCollisionEnter(Collision collision)
     {
-        if (state != State.Alive) { return; }
+        if (state != State.Alive || !collisionsEnabled) { return; }
 
         switch (collision.gameObject.tag)
         {
@@ -77,7 +94,15 @@ public class Rocket : MonoBehaviour
 
     private void LoadNextLevel()
     {
-        EditorSceneManager.LoadScene(1);
+        int currentSceneIndex = EditorSceneManager.GetActiveScene().buildIndex;
+        if (currentSceneIndex == EditorSceneManager.sceneCountInBuildSettings)
+        {
+            EditorSceneManager.LoadScene(0);
+        } 
+        else
+        {
+            EditorSceneManager.LoadScene(currentSceneIndex + 1);
+        }
     }
 
     private void LoadFirstLevel()
@@ -90,12 +115,19 @@ public class Rocket : MonoBehaviour
         float rotationSpeed = deltaWings * Time.deltaTime;
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Rotate(Vector3.forward * rotationSpeed);
+            RotateInput(rotationSpeed);
         }
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Rotate(-Vector3.forward * rotationSpeed);
+            RotateInput(-rotationSpeed);
         }
+    }
+
+    private void RotateInput(float rotationSpeed)
+    {
+        rigidBody.freezeRotation = true;
+        transform.Rotate(Vector3.forward * rotationSpeed);
+        rigidBody.freezeRotation = false;
     }
 
     private void RespondThrustInput()
