@@ -1,6 +1,6 @@
-![Gamedev.tv Logo](https://i.udemycdn.com/user/200_H/33027212_4271_5.jpg)
-
-# Boost Rocket
+<p align="center">![Gamedev.tv Logo](https://i.udemycdn.com/user/200_H/33027212_4271_5.jpg) 
+ <h1>Boost Rocket</h1>
+</p>
 -------------------------
 
 <p align="center"><img src="https://image.freepik.com/vetores-gratis/rocket-mars-paisagem-cena_1308-31527.jpg" width = "600" height="400"></p>
