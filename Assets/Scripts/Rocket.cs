@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 using System;
 
 public class Rocket : MonoBehaviour
@@ -50,7 +50,8 @@ public class Rocket : MonoBehaviour
         {
             LoadNextLevel();
         }
-        else if (Input.GetKeyDown(KeyCode.C)) {
+        else if (Input.GetKeyDown(KeyCode.C))
+        {
             collisionsEnabled = !collisionsEnabled;
             Debug.Log(collisionsEnabled);
         }
@@ -94,20 +95,20 @@ public class Rocket : MonoBehaviour
 
     private void LoadNextLevel()
     {
-        int currentSceneIndex = EditorSceneManager.GetActiveScene().buildIndex;
-        if (currentSceneIndex == EditorSceneManager.sceneCountInBuildSettings)
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        if (currentSceneIndex == SceneManager.sceneCountInBuildSettings)
         {
-            EditorSceneManager.LoadScene(0);
-        } 
+            SceneManager.LoadScene(0);
+        }
         else
         {
-            EditorSceneManager.LoadScene(currentSceneIndex + 1);
+            SceneManager.LoadScene(currentSceneIndex + 1);
         }
     }
 
     private void LoadFirstLevel()
     {
-        EditorSceneManager.LoadScene(0);
+        SceneManager.LoadScene(0);
     }
 
     private void RespondRotateInput()
