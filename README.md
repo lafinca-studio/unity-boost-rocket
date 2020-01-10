@@ -1,6 +1,5 @@
 <p>
- <img src="https://i.udemycdn.com/user/200_H/33027212_4271_5.jpg" width= "100" height="100" alt="Gamedev.tv"></img> 
- <h1>Boost Rocket</h1>
+ <img src="https://i.udemycdn.com/user/200_H/33027212_4271_5.jpg" width= "100" height="100" alt="Gamedev.tv"><h1>Boost Rocket</h1></img> 
 </p>
 
 <p align="center"><img src="https://image.freepik.com/vetores-gratis/rocket-mars-paisagem-cena_1308-31527.jpg" width = "600" height="400"></p>
