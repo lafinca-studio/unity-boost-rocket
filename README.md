@@ -1,4 +1,4 @@
-<h1 align="center"><img src="https://i.udemycdn.com/user/200_H/33027212_4271_5.jpg" width= "100" height="100" alt="Gamedev.tv">Boost Rocket</img></h1>
+<a href="https://arthsan.github.io/unity-boost-rocket/"><h1 align="center"><img src="https://i.udemycdn.com/user/200_H/33027212_4271_5.jpg" width= "50" height="50" alt="Gamedev.tv">Boost Rocket</img></h1></a>
 
 
 <p align="center"><img src="https://image.freepik.com/vetores-gratis/rocket-mars-paisagem-cena_1308-31527.jpg" width = "600" height="400"></p>
