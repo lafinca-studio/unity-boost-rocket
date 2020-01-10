@@ -5,7 +5,7 @@
 
 <p align="center"><img src="https://image.freepik.com/vetores-gratis/rocket-mars-paisagem-cena_1308-31527.jpg" width = "600" height="400"></p>
 
-Boost Rocket is a game made throughout the Gamedev.tv course. The objective is learning how to code in C# having fun and developing a game in Unity Engine.
+Boost Rocket is a game made throughout the [Gamedev.tv course](https://www.gamedev.tv/). The objective is learning how to code in C# having fun and developing a game in Unity Engine.
 
 ### Version Log
 ----
