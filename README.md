@@ -1,4 +1,4 @@
-<p align="center">
+<p>
  <img src="https://i.udemycdn.com/user/200_H/33027212_4271_5.jpg" width= "100" height="100" alt="Gamedev.tv"></img> 
  <h1>Boost Rocket</h1>
 </p>
@@ -12,7 +12,8 @@ Boost Rocket is a game made throughout the [Gamedev.tv course](https://www.gamed
 
 v0.0.1 - Demo for pass through the levels
 
-## Developer
+
+### Developer
 -------------------------
 
 Arthur Santoianni Barazzone Durant
